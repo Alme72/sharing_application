@@ -6,7 +6,6 @@ import 'package:http/http.dart' as http;
 import 'package:test_project/page/control.dart';
 
 // web data request
-
 Future<Post> fetchPost() async {
   final response = await http.get(Uri.parse('https://ubuntu.i4624.tk/test'));
   if (response.statusCode == 200) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_project/page/control.dart';
 import 'package:test_project/repository/contents_repository.dart';
 
 class Write extends StatefulWidget {
@@ -36,7 +37,7 @@ class _WriteState extends State<Write> {
     ContensRepository.datas.add({
       'image': "assets/images/ex1.png", // 사진 첨수 기능 만들어야함
       'title': title,
-      'location': location,
+      'location': location, // 주소 검색 api 적용 필요
       'price': price,
       'like': "0", // 초기값 = 0, 이후 서버로부터 갱신 필요
     });
@@ -159,6 +160,10 @@ class _WriteState extends State<Write> {
                           location: location,
                           price: price,
                         );
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Control()));
                       },
                       child: const Text(
                         "Done",
