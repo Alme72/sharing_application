@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:test_project/page/chat.dart';
+//import 'package:test_project/page/chat.dart';
+import 'package:test_project/page/image.dart';
 import 'package:test_project/page/home.dart';
 import 'package:test_project/page/mapview.dart';
 import 'package:test_project/page/user.dart';
@@ -21,7 +22,7 @@ class _ControlState extends State<Control> {
   Widget _bodyWidget() {
     switch (_currentPageIndex) {
       case 0:
-        return const Home();
+        return Home();
       case 1:
         return const Write();
       case 2:
@@ -31,7 +32,7 @@ class _ControlState extends State<Control> {
       case 4:
         return const User();
       default:
-        return const Home();
+        return Home();
     }
   }
 
